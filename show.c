@@ -13,14 +13,13 @@
 #include "led_status.h"
 #include "outputs.h"
 
-uint32_t show_output_miliseconds[OUTPUTS_CNT] = {
-		100, 200, 300, 400, 500, 1000, 1000, 1000, 1000, 1000, 1000, 1000,
-		1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000
+uint32_t show_output_milliseconds[OUTPUTS_CNT] = {
+		100, 200, 300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
 // to disable output set corresponding value to -1
 int8_t show_output[OUTPUTS_CNT] = {
-		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+		0, 1, 2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
 };
 
 volatile uint32_t show_time;
@@ -45,14 +44,16 @@ SHOW_STATE_t show_get_state(void){
 
 void show_execute(void){
 	uint32_t ms;
+	uint8_t out;
 	if(show_state == running){
 		for(uint8_t out_idx=0; out_idx < OUTPUTS_CNT; out_idx++){
-			ms = show_output_miliseconds[out_idx];
+			ms = show_output_milliseconds[out_idx];
+			out = show_output[out_idx];
 			if(show_time >= ms && (show_time <= (ms + OUTPUT_ON_TIME))){
-				output_set(out_idx);
+				output_set(out);
 			}
 			else{
-				output_clr(out_idx);
+				output_clr(out);
 			}
 		}
 	}
