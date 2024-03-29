@@ -8,16 +8,7 @@
 #ifndef OUTPUTS_H_
 #define OUTPUTS_H_
 
-// Makra upraszczające dostęp do portów
-// *** PORT
-#define PORT(x) SPORT(x)
-#define SPORT(x) (PORT##x)
-// *** PIN
-#define PIN(x) SPIN(x)
-#define SPIN(x) (PIN##x)
-// *** DDR
-#define DDR(x) SDDR(x)
-#define SDDR(x) (DDR##x)
+#include "common.h"
 
 #define OUTPUTS_CNT 20
 

@@ -8,17 +8,7 @@
 #ifndef BUTTONS_H_
 #define BUTTONS_H_
 
-// Makra upraszczające dostęp do portów
-// *** PORT
-#define PORT(x) SPORT(x)
-#define SPORT(x) (PORT##x)
-// *** PIN
-#define PIN(x) SPIN(x)
-#define SPIN(x) (PIN##x)
-// *** DDR
-#define DDR(x) SDDR(x)
-#define SDDR(x) (DDR##x)
-
+#include "common.h"
 
 #define BTN_START_PORT B
 #define BTN_START_PIN 7
