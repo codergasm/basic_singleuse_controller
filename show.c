@@ -49,11 +49,13 @@ void show_execute(void){
 		for(uint8_t out_idx=0; out_idx < OUTPUTS_CNT; out_idx++){
 			ms = show_output_milliseconds[out_idx];
 			out = show_output[out_idx];
-			if(show_time >= ms && (show_time <= (ms + OUTPUT_ON_TIME))){
-				output_set(out);
-			}
-			else{
-				output_clr(out);
+			if(out > -1){
+				if(show_time >= ms && (show_time <= (ms + OUTPUT_ON_TIME))){
+					output_set(out);
+				}
+				else{
+					output_clr(out);
+				}
 			}
 		}
 	}
