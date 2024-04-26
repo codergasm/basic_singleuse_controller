@@ -30,5 +30,6 @@ int main(void){
 			show_start();
 		}
 		show_execute();
+		led_status_loop();
 	}
 }

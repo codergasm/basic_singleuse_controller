@@ -10,6 +10,8 @@
 
 #include "led_status.h"
 
+uint8_t led_state = 0;
+
 void led_status_init(void){
 	DDR(LED_PORT) |= (1 << LED_PIN);
 	led_status_off();
@@ -31,7 +33,12 @@ void led_status_toggle(void){
 	PORT(LED_PORT) ^= (1 << LED_PIN);
 }
 
+void led_status_loop(void){
+	if(led_state) led_status_on();
+	else led_status_off();
+}
+
 
 ISR(TIMER1_COMPA_vect){
-	led_status_toggle();
+	led_state = !led_state;
 }

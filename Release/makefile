@@ -63,7 +63,7 @@ main-build: basic_singleuse_controller.elf secondary-outputs
 basic_singleuse_controller.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,basic_singleuse_controller.map -mmcu=atmega48pb -o "basic_singleuse_controller.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,basic_singleuse_controller.map -mmcu=atmega48pa -o "basic_singleuse_controller.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -87,7 +87,7 @@ basic_singleuse_controller.eep: basic_singleuse_controller.elf makefile objects.
 
 sizedummy: basic_singleuse_controller.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega48pb basic_singleuse_controller.elf
+	-avr-size --format=avr --mcu=atmega48pa basic_singleuse_controller.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
