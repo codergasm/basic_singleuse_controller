@@ -489,8 +489,8 @@ Disassembly of section .text:
  436:	d0 90 ce 01 	lds	r13, 0x01CE
  43a:	e0 90 cf 01 	lds	r14, 0x01CF
  43e:	f0 90 d0 01 	lds	r15, 0x01D0
- 442:	44 5d       	subi	r20, 0xD4	; 212
- 444:	5e 4f       	sbci	r21, 0xFE	; 254
+ 442:	4c 59       	subi	r20, 0x9C	; 156
+ 444:	5f 4f       	sbci	r21, 0xFF	; 255
  446:	6f 4f       	sbci	r22, 0xFF	; 255
  448:	7f 4f       	sbci	r23, 0xFF	; 255
  44a:	4c 15       	cp	r20, r12
