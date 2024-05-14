@@ -8,7 +8,7 @@
 #ifndef SHOW_H_
 #define SHOW_H_
 
-#define OUTPUT_ON_TIME 300  // ms
+#define OUTPUT_ON_TIME 100  // ms
 
 typedef enum SHOW_STATE {stopped, running} SHOW_STATE_t;
 
