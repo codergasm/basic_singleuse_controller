@@ -15,7 +15,7 @@
 
 #define BTN_MIN_PRESS_CNT 5 // mean 50ms
 
-typedef enum button_state {released, pressed} BUTTON_STATE_t;
+typedef enum button_state {none, released, pressed} BUTTON_STATE_t;
 
 void buttons_init(void);
 BUTTON_STATE_t button_start_get_state(void);
