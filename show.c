@@ -54,7 +54,7 @@ void show_execute(void){
 	for(uint8_t out_idx=0; out_idx < OUTPUTS_CNT; out_idx++){
 		ms = show_output_milliseconds[out_idx];
 		out = show_output[out_idx];
-		if(out < 0) continue;
+		if((out < 0) || (out >= OUTPUTS_CNT)) continue;
 		if(show_time >= ms && (show_time <= (ms + OUTPUT_ON_TIME))){
 			output_set(out);
 		}

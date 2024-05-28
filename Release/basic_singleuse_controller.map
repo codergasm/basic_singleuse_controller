@@ -131,7 +131,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x4c2
+.text           0x00000000      0x4c8
  *(.vectors)
  .vectors       0x00000000       0x34 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega48pa.o
                 0x00000000                __vector_default
@@ -273,55 +273,55 @@ END GROUP
                 0x000003e4        0x6 ./show.o
                 0x000003e4                show_get_state
  .text.show_execute
-                0x000003ea       0x8a ./show.o
+                0x000003ea       0x90 ./show.o
                 0x000003ea                show_execute
  .text.__vector_7
-                0x00000474       0x4a ./show.o
-                0x00000474                __vector_7
+                0x0000047a       0x4a ./show.o
+                0x0000047a                __vector_7
  .text.libgcc.mul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
- .text.libgcc   0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
- .text.libgcc   0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
-                0x000004be                . = ALIGN (0x2)
+                0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
+                0x000004c4                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000004be        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
-                0x000004be                _exit
-                0x000004be                exit
+ .fini9         0x000004c4        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+                0x000004c4                _exit
+                0x000004c4                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -340,11 +340,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000004be        0x4 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
+ .fini0         0x000004c4        0x4 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x000004c2                _etext = .
+                0x000004c8                _etext = .
 
-.data           0x00800100       0x64 load address 0x000004c2
+.data           0x00800100       0x64 load address 0x000004c8
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/users/dawid/documents/mkclipse/avr toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega48pa.o
@@ -402,8 +402,8 @@ END GROUP
  COMMON         0x008001cd        0x4 ./show.o
                 0x008001cd                show_time
                 0x008001d1                PROVIDE (__bss_end, .)
-                0x000004c2                __data_load_start = LOADADDR (.data)
-                0x00000526                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000004c8                __data_load_start = LOADADDR (.data)
+                0x0000052c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008001d1        0x0
                 0x008001d1                PROVIDE (__noinit_start, .)
