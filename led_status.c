@@ -18,7 +18,7 @@ void led_status_init(void){
 
 	TCCR1B |= (1 << WGM12) | (1 << CS11) | (1 << CS10);
 	TIMSK1 |= (1 << OCIE1A);
-	OCR1A = 15624;
+	OCR1A = 5208;
 }
 
 void led_status_on(void){

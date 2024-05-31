@@ -26,10 +26,13 @@ int main(void){
 
 
 	while(1){
-		if(show_get_state() == stopped && button_start_get_state() == pressed){
-			show_start();
+		if(show_get_state() == stopped){
+			led_status_loop();
+			if(button_start_get_state() == pressed){
+				show_start();
+				led_status_on();
+			}
 		}
 		show_execute();
-		led_status_loop();
 	}
 }

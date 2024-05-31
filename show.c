@@ -12,6 +12,7 @@
 #include "show.h"
 #include "led_status.h"
 #include "outputs.h"
+#include "config.h"
 
 //uint32_t show_output_milliseconds[OUTPUTS_CNT] = {
 //		3500, 7000, 10500, 14000, 17500, 21000, 24500, 28000, 31500, 35000, 38500, 42000, 45500, 49000, 52500, 56000, 59500, 63000, 66500, 70000
@@ -29,10 +30,35 @@ int8_t show_output[OUTPUTS_CNT] = {
 volatile uint32_t show_time;
 SHOW_STATE_t show_state = stopped;
 
+#if FIRMWARE_TEST == 1
+
+uint32_t show_time_end;
+
+static uint32_t show_get_time_end(void){
+	uint32_t max = 0;
+	for(uint8_t out_idx=0; out_idx < OUTPUTS_CNT; out_idx++){
+		if(show_output_milliseconds[out_idx] > max) {
+			max = show_output_milliseconds[out_idx];
+		}
+	}
+	max = max + OUTPUT_ON_TIME;
+	return max;
+}
+
+static uint8_t show_end_check(void){
+	return show_time > show_time_end;
+}
+
+#endif
+
 void show_init(void){
 	TCCR2A |= (1 << WGM21);  // CTC
 	TCCR2B |= (1 << CS21);  // prescaler 8
 	OCR2A = 125; // 1ms
+
+#if FIRMWARE_TEST == 1
+	show_time_end = show_get_time_end();
+#endif
 }
 
 void show_start(void){
@@ -50,6 +76,9 @@ void show_execute(void){
 	uint32_t ms;
 	uint8_t out;
 	if(show_state != running) return;
+#if FIRMWARE_TEST == 1
+	if(show_end_check()) show_state = stopped;
+#endif
 
 	for(uint8_t out_idx=0; out_idx < OUTPUTS_CNT; out_idx++){
 		ms = show_output_milliseconds[out_idx];
